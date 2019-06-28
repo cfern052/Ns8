@@ -1,3 +1,5 @@
+
+
 //interface
 
 interface DesiredDataShape {
@@ -27,7 +29,7 @@ let data: DesiredDataShape[]=[
 
 function displayData(options:DesiredDataShape):any {
 let user ={firstName:options.firstName, lastName:options.lastName, phone:options.phone,email:options.email}
-    let firstName=options.firstName
+let firstName=options.firstName
 let lastName=options.lastName
 let phone=options.phone
 let email=options.phone

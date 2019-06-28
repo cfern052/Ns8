@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cfern052/Ns8/issues"
   },
-  "homepage": "https://github.com/cfern052/Ns8#readme"
+  "homepage": "https://github.com/cfern052/Ns8#readme",
+  "dependencies": {
+    "@types/jquery": "^3.3.30"
+  }
 }
