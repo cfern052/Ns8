@@ -12,7 +12,7 @@ interface DesiredDataShape {
 
 // var fullData:string;
 
-let data: DesiredDataShape[]=[
+let data: DesiredDataShape=[
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
     { firstName: "Ringo", lastName: "Starter", phone: "555-455-5555", email: "ringo@email.com" },
     { firstName: "Courtney McKenzie", lastName: "", phone: "555-545-5555", email: "ringo@email" },
@@ -33,6 +33,8 @@ let firstName=options.firstName
 let lastName=options.lastName
 let phone=options.phone
 let email=options.phone
+
+
 console.log("First Name: " + firstName, "Last Name: " + lastName,"Phone Number: " + phone,"email: " + email)
 return user
 };
