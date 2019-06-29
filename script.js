@@ -1,5 +1,4 @@
 //interface
-// var fullData:string;
 var data = [
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
     { firstName: "Ringo", lastName: "Starter", phone: "555-455-5555", email: "ringo@email.com" },
@@ -15,12 +14,18 @@ var data = [
     { firstName: "Jim", lastName: "Onfire" }
 ];
 function displayData(options) {
-    var user = { firstName: options.firstName, lastName: options.lastName, phone: options.phone, email: options.email };
+    var user = {
+        firstName: options.firstName,
+        lastName: options.lastName,
+        phone: options.phone,
+        email: options.email
+    };
     var firstName = options.firstName;
     var lastName = options.lastName;
     var phone = options.phone;
-    var email = options.phone;
+    var email = options.email;
     console.log("First Name: " + firstName, "Last Name: " + lastName, "Phone Number: " + phone, "email: " + email);
     return user;
 }
 ;
+displayData(data[0]);
