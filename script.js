@@ -1,4 +1,5 @@
 //interface
+var allData=[];
 var data = [
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
     { firstName: "Ringo", lastName: "Starter", phone: "555-455-5555", email: "ringo@email.com" },
@@ -12,6 +13,7 @@ var data = [
     { firstName: "Mary", lastName: "Fallen", phone: "5551555555", email: "mary@email.com" },
     { firstName: "John", lastName: "Stalin", phone: "555-355-5555", email: "john@email.com" },
     { firstName: "Jim", lastName: "Onfire" }
+    
 ];
 // data.map(val => <DesiredDataShape>{
 //    firstName: val.firstName,
@@ -22,6 +24,7 @@ var data = [
 function displayData(options) {
     for (var i = 0; i < data.length; i++) {
         var allData = data[i];
+        allData
         var user = {
             firstName: options.firstName,
             lastName: options.lastName,
