@@ -13,19 +13,30 @@ var data = [
     { firstName: "John", lastName: "Stalin", phone: "555-355-5555", email: "john@email.com" },
     { firstName: "Jim", lastName: "Onfire" }
 ];
+// data.map(val => <DesiredDataShape>{
+//    firstName: val.firstName,
+//     lastName: val.lastName,
+//     phone: val.phone,
+//     email: val.email
+//   });
 function displayData(options) {
-    var user = {
-        firstName: options.firstName,
-        lastName: options.lastName,
-        phone: options.phone,
-        email: options.email
-    };
-    var firstName = options.firstName;
-    var lastName = options.lastName;
-    var phone = options.phone;
-    var email = options.email;
-    console.log("First Name: " + firstName, "Last Name: " + lastName, "Phone Number: " + phone, "email: " + email);
-    return user;
+    for (var i = 0; i < data.length; i++) {
+        var allData = data[i];
+        var user = {
+            firstName: options.firstName,
+            lastName: options.lastName,
+            phone: options.phone,
+            email: options.email
+        };
+        console.log("user: " + JSON.stringify(user));
+        var firstName = options.firstName;
+        var lastName = options.lastName;
+        var phone = options.phone;
+        var email = options.email;
+        console.log("allData: " + JSON.stringify(allData));
+        console.log("First Name: " + firstName, "Last Name: " + lastName, "Phone Number: " + phone, "email: " + email);
+        return user;
+    }
 }
 ;
-displayData(data[0]);
+ document.body.textContent=JSON.stringify(data[0]);

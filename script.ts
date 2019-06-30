@@ -7,10 +7,8 @@ interface DesiredDataShape {
     lastName?: string | 'N/A';
     phone?: string | 'N/A';
     email?: string | 'N/A';
+
 }
-
-
-
 
 let data: DesiredDataShape[] = [
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
@@ -27,7 +25,18 @@ let data: DesiredDataShape[] = [
     { firstName: "Jim", lastName: "Onfire" }
 ]
 
+
+// data.map(val => <DesiredDataShape>{
+//    firstName: val.firstName,
+//     lastName: val.lastName,
+//     phone: val.phone,
+//     email: val.email
+//   });
+
 function displayData(options: DesiredDataShape): any {
+     for(var i=0;i<data.length; i++){
+        var allData=data[i]
+    
     let user = {
         firstName: options.firstName,
         lastName: options.lastName,
@@ -39,14 +48,19 @@ function displayData(options: DesiredDataShape): any {
     let phone = options.phone
     let email = options.email
 
-
+// console.log(allData)
     console.log(
         "First Name: " + firstName,
         "Last Name: " + lastName,
         "Phone Number: " + phone,
         "email: " + email);
+        
     return user;
+    
+     }
+    
 };
 
-displayData(data[0]);
+// Document.body.textContent=displayData(data[0]);
+
 
