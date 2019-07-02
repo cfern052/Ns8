@@ -17,8 +17,6 @@ var people= [
 ];
 function displayData(data) {
     data.map(person => {
-      // object destructing goes ahead and takes the current object and sets a default value
-      // if the person has a missing property
       const {
         firstName = "",
         lastName = "",
@@ -32,7 +30,7 @@ function displayData(data) {
         email
       };
       console.log(newPerson);
-      document.body.textContent=JSON.stringify(people);
+      document.body.textContent=JSON.stringify(people, undefined, 2);
     });
   }
   displayData(people);

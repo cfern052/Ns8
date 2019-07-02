@@ -10,7 +10,7 @@ interface DesiredDataShape {
 
 }
 
-let data: DesiredDataShape[] = [
+let people: DesiredDataShape[] = [
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
     { firstName: "Ringo", lastName: "Starter", phone: "555-455-5555", email: "ringo@email.com" },
     { firstName: "Courtney McKenzie", lastName: "", phone: "555-545-5555", email: "ringo@email" },
@@ -34,20 +34,20 @@ let data: DesiredDataShape[] = [
 //   });
 
 function displayData(options: DesiredDataShape): any {
-     for(var i=0;i<data.length; i++){
-        var allData=data[i]
-    
-    let user = {
-        firstName: options.firstName,
-        lastName: options.lastName,
-        phone: options.phone,
-        email: options.email
-    };
-    let firstName = options.firstName
-    let lastName = options.lastName
-    let phone = options.phone
-    let email = options.email
-
+    data.map(person => {
+        const {
+          firstName = "",
+          lastName = "",
+          phone = "missing",
+          email = "missing"
+        } = person;
+        const newPerson = {
+          firstName,
+          lastName,
+          phone,
+          email
+        };
+        console.log(newPerson);
 // console.log(allData)
     console.log(
         "First Name: " + firstName,
