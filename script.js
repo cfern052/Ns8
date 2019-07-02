@@ -1,6 +1,6 @@
 //interface
-var allData=[];
-var data = [
+
+var people= [
     { lastName: "Alberston", phone: "555-255-5555", email: "name.a@email.com" },
     { firstName: "Ringo", lastName: "Starter", phone: "555-455-5555", email: "ringo@email.com" },
     { firstName: "Courtney McKenzie", lastName: "", phone: "555-545-5555", email: "ringo@email" },
@@ -15,31 +15,26 @@ var data = [
     { firstName: "Jim", lastName: "Onfire" }
     
 ];
-// data.map(val => <DesiredDataShape>{
-//    firstName: val.firstName,
-//     lastName: val.lastName,
-//     phone: val.phone,
-//     email: val.email
-//   });
-function displayData(options) {
-    for (var i = 0; i < data.length; i++) {
-        var allData = data[i];
-        allData
-        var user = {
-            firstName: options.firstName,
-            lastName: options.lastName,
-            phone: options.phone,
-            email: options.email
-        };
-        console.log("user: " + JSON.stringify(user));
-        var firstName = options.firstName;
-        var lastName = options.lastName;
-        var phone = options.phone;
-        var email = options.email;
-        console.log("allData: " + JSON.stringify(allData));
-        console.log("First Name: " + firstName, "Last Name: " + lastName, "Phone Number: " + phone, "email: " + email);
-        return user;
-    }
-}
-;
- document.body.textContent=JSON.stringify(data[0]);
+function displayData(data) {
+    data.map(person => {
+      // object destructing goes ahead and takes the current object and sets a default value
+      // if the person has a missing property
+      const {
+        firstName = "",
+        lastName = "",
+        phone = "missing",
+        email = "missing"
+      } = person;
+      const newPerson = {
+        firstName,
+        lastName,
+        phone,
+        email
+      };
+      console.log(newPerson);
+      document.body.textContent=JSON.stringify(people);
+    });
+  }
+  displayData(people);
+
+ 
